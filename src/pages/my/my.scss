@@ -1,0 +1,108 @@
+page-my {
+    ion-header{
+        .myhead{
+            width: 100%;
+            background-image: url("../assets/imgs/mybg.jpg"); 
+            .myhead1{
+                display: flex;
+                justify-content: center;
+                padding-top: 10%;
+                height: 70%;
+            }
+            .myhead2{
+                display: flex;
+                justify-content: center;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                font-size: 20px;
+                font-weight: 550;
+            }
+        }
+    }
+    ion-content{
+        background-color: #ffe8cf;
+        .mycon{
+            width: 100%;
+            background-color: #FDFDC4;
+            margin: 5% 0 0 0;
+            hr{
+                width: 88%;
+            }
+            .mycondata{
+                width: 90%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto;
+                .mycondata1{
+                    font-size: 115%;
+                    font-family: "黑体";
+                }
+                .mycondata2{
+                    font-size: 115%;
+                }
+            }
+            .myconcourse{
+                width: 90%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto;
+                .myconcourse1{
+                    font-size: 115%;
+                    font-family: "黑体";
+                }
+                .myconcourse2{
+                    font-size: 115%;
+                }
+            }
+            .myconprove{
+                width: 90%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto;
+                .myconprove1{
+                    font-size: 115%;
+                    font-family: "黑体";
+                }
+                .myconprove2{
+                    font-size: 115%;
+                }
+            }
+            .mycontalk{
+                width: 90%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto;
+                .mycontalk1{
+                    font-size: 115%;
+                    font-family: "黑体";
+                }
+                .mycontalk2{
+                    font-size: 115%;
+                }
+            }
+            .myconsetting{
+                width: 90%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 auto;
+                .myconsetting1{
+                    font-size: 115%;
+                    font-family: "黑体";
+                }
+                .myconsetting2{
+                    font-size: 115%;
+                }
+            }
+        }
+    }
+}
