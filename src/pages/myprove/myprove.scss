@@ -23,7 +23,7 @@ page-myprove {
         }
     }
     ion-content{
-        background-color: #f1ffab!important;
+        background-color: rgb(245,245,245)!important;
         .mprocon{
             ion-list{
                 ion-item{
@@ -33,21 +33,23 @@ page-myprove {
                     }
                     input::-webkit-input-placeholder {
                         color: #878c8e;
-                        font-size: 40%;
+                        font-size: 12px;
                         opacity: 0.4;
                     }
                     ion-label{
-                        font-size: 15%;
+                        font-size: 14px;
                     }
                 }
             }
             .mprocon1{
-                width: 100%;
+                width: 90%;
                 height:130px;
                 background-color: #fff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin: 0 auto;
+                border:1px solid #878c8e; 
                 button{
                     border: 1px solid #eee;
                     background-color: #fff;
@@ -71,7 +73,7 @@ page-myprove {
                 width: 50%;
                 height: 100%;
                 border-radius: 20px;
-                background-color: #fb9a40;
+                background-color: #ffb006;
             }
         }
         .mprocon3{

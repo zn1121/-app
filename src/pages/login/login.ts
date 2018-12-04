@@ -18,6 +18,8 @@ export class LoginPage {
   items = [];
   view = ViewChild;
   isActive = true;
+  phonenumber: string;
+  password: string;
   isClick(i){
     this.isActive = i;
   }
@@ -32,10 +34,17 @@ export class LoginPage {
   }
   gobpage(){
     this.navCtrl.popToRoot();
+    console.log("用户名："+this.phonenumber);
+    console.log("密码："+this.password);
+
   }
   gologin(){
     this.navCtrl.push(LoginPage);
+    console.log("用户名："+this.phonenumber);
+    console.log("密码："+this.password);
   }
+  
+    
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }

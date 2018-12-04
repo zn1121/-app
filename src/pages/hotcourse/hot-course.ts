@@ -17,8 +17,8 @@ export class HotCoursePage {
   arr=['语文','数学','英语','物理','化学','生物','地理','历史','政治'];
   isActive=0;
   i: number;
-  isClick(){
-    this.isActive=this.i;
+  isClick(i){
+    this.isActive=i;
   }
   arr0=['','','','','']; //以后要传数据
   arr1=['','','','','','','']; //以后要传数据

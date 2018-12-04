@@ -1,10 +1,14 @@
 page-forget {
-    ion-header{
+    ion-content{
+        background: url(../assets/imgs/loginbg1.jpg);
+        
+        background-repeat: repeat-x,repeat-y;  
+        background-size: cover;
         .fg1{
             display: flex;
             width: 100%;
             height: 50px;
-            background-color: #00adb5;
+            //background-color: #00adb5;
             .fg1-1{
                 width: 20%;
                 font-size: 30px;
@@ -17,14 +21,10 @@ page-forget {
                 justify-content: center;
                 align-items: center;
                 font-size: 18px;
-                color: #fff;
+                color: #000;
                 width: 60%;
             }
-        }
-    }
-    ion-content{
-        background: url(../assets/imgs/loginbg1.jpg) bottom center no-repeat;
-        background-size: 100% 100%;              
+        }           
         .fg2{
             width: 100%;
             margin-top: 10%;

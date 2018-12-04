@@ -23,7 +23,7 @@ page-mydata {
         }
     }
     ion-content{
-        background-color:#f1ffab!important;
+        background-color: rgb(250,250,250)!important;
         .mdfscon{
             display: flex;
             justify-content: center;
@@ -38,11 +38,11 @@ page-mydata {
                     }
                     input::-webkit-input-placeholder {
                         color: #878c8e;
-                        font-size: 30%;
+                        font-size: 15px;
                         opacity: 0.4;
                     }
                     ion-label{
-                        font-size: 90%;
+                        font-size: 17px;
                         color: #878c8e;
                         width: 30%;
                         display: flex;
@@ -63,10 +63,6 @@ page-mydata {
                         align-items: center;
                         flex-direction: row;
                         flex-wrap:nowrap;
-                        p{
-
-                        }
-
                         input[type="checkbox"]{
                             width:20%;
                             display: inline-block;
@@ -87,13 +83,12 @@ page-mydata {
                         input[type="checkbox"]:checked::before{
                             content: "\2713";
                             background-color: #fff;
-                            position: absolute;
                             top: 0;
                             left: 0;
                             width:100%;
                             border: 1px solid #e50232;
                             color:#e50232;
-                            font-size: 20px;
+                            font-size: 16px;
                             font-weight: bold;
                         }
                     }
@@ -104,7 +99,7 @@ page-mydata {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 30px;
+            height: 40px;
             margin-bottom: 20%;
             .input-cover{
                 position: static;
@@ -114,7 +109,7 @@ page-mydata {
                 width: 50%;
                 height: 100%;
                 border-radius: 20px;
-                background-color: #fb9a40;
+                background-color: #ffb006;
             }
         }
     }
