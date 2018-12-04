@@ -67,27 +67,30 @@ page-talk {
         clear: both !important;   //左侧和右侧均不允许出现浮动元素 避免在下一行的元素在上一行堆积
       }
       #a{width:100%;  //表情
-        height:24%;
+        height:30%;
         border:1px solid #C0C0C0;
         background-color:#fff;
         position:absolute;
-        bottom:22%;
+        bottom:0;
         display:none;
-        overflow:hidden;
+        overflow-y:scroll;//显示纵向滚动条
+        -webkit-overflow-scrolling:touch;
         img{
             float:left;
-            width:20px;
-            height:20px;
+            width:8%;
+            height:auto;//使img的高度和宽度一致，因为图片原本就是宽度和高度一致
+            margin:10px 2.25%;
         }
         }
       ion-footer{
+          margin:0 5%;
+          width:90%;
             ion-input{
                 float:left;
               width:60%!important;
               border:2px solid rgb(212,212,212);
               border-radius:4%;
               margin:2% 2%;
-
               .text-input{
                   margin:10px 8px;
               }
@@ -100,7 +103,8 @@ page-talk {
           }
           button{
               float:left;
-              width:10%;
+              width:20%;
+              margin:2% 2%;
               padding:0;
               margin-top:3%!important;
               .button-inner{

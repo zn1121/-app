@@ -34,14 +34,15 @@
         </div>
         <div class="c"></div>
     </div>
-
+    <div id="a">     <!--在ion-content中添加，才能显示滚动条-->      
+    </div>
 </ion-content>
 
-<!-- 底部固定的输入框 -->
-<div id="a"></div>
+<!-- 底部固定的内容 -->
+
 <ion-footer>
-        <ion-input [(ngModel)]="txt" placeholder="请输入内容" [ngModelOptions]="{standalone: true}"></ion-input>
+  
+        <ion-input id="input" [(ngModel)]="txt" placeholder="请输入内容" [ngModelOptions]="{standalone: true}"></ion-input>
         <span><ion-icon name="md-happy" id="face"></ion-icon></span>  <!--表情-->
-        <span><ion-icon name="md-add"></ion-icon></span>
         <button ion-button  (click)="send(txt)" style="height:30px;">发送</button>  <!--点击发送按钮可以发送数据-->
 </ion-footer>

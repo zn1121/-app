@@ -68,21 +68,32 @@ export class TalkPage {
       this.txt='';
     }
     ionViewWillEnter() {
-      $(function($){
+
+      $(function($){   //点击笑脸显示表情
         $('#face').click(function(){
         if($('#a').css('display')=='none'){
           //console.log('face');
           $('#a').css("display","block");
           var tem='';
 		      for(var i=1;i<=132;i++){
-            tem += "<div class='de"+i+"'><img src='../assets/imgs/QQ/"+i+".gif'></div>"
-           }
-           $("#a").append(tem);
-
+            tem += "<div class='de'><img src='../assets/imgs/QQ/"+i+".gif'></div>";
+           } 
+        $("#a").append(tem);
+        var spanlist = $('#a');
+     // for (var i = 0; i <spanlist.children().length; i++) {
+      $('div.de').on("click",function(event){
+        console.log(event.target);
+        $("#input").append(event.target);
+       $("#input img").width(20);
+       $("#input img").height(20);
+      });
+     // }
        }
       else{
           //console.log('face');
-          $('#a').css("display","none");
+          $('#a').html('');  //将div里面的内容全部删除，否则再次点击时，会有两组图片
+          $('#a').css("display","none");  
+
       }
     })
   })
