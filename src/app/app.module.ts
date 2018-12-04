@@ -38,6 +38,7 @@ import { TeacherPage } from '../pages/teacher/teacher';
 import { TeachersPage } from '../pages/teachers/teachers';
 import { HotCoursePage } from '../pages/hotcourse/hot-course';
 import { JobsPage } from '../pages/jobs/jobs';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
 
 
 
@@ -126,7 +127,8 @@ import { JobsPage } from '../pages/jobs/jobs';
     StatusBar,
     //Camera,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpServiceProvider
   ]
 })
 export class AppModule {}

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ForgetPage } from '../forget/forget';
 import { Http } from "@angular/http";
+//import { HttpHeaders } from '@angular/common/http';
 import'rxjs/add/operator/map';
 /**
  * Generated class for the LoginPage page.
@@ -21,6 +22,7 @@ export class LoginPage {
   isActive = true;
   phonenumber: string;
   password: string;
+  
   isClick(i){
     this.isActive = i;
   }
@@ -45,11 +47,13 @@ export class LoginPage {
     console.log("密码："+this.password);
   }
   
-  doInfinite(infiniteScroll){
-    this.http.get('/api/course',{
-
+  get(){
+    this.http.get('url',{
+    }).subscribe(data=>{
+      console.log(data);
     })
   }
+ 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
