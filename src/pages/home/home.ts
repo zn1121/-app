@@ -11,7 +11,6 @@ import { MyjobPage} from '../myjob/myjob';
 //import { LearningPage} from '../learning/learning';
 import { HotCoursePage } from '../hotcourse/hot-course';
 import 'rxjs/add/operator/toPromise';
-import { LearningPage } from '../learning/learning';
 
 @Component({
   selector: 'page-home',
@@ -41,7 +40,7 @@ export class HomePage {
     this.navCtrl.push(MyjobPage);
   }
   goback5(){
-    this.navCtrl.push(LearningPage);
+    this.navCtrl.push(HotCoursePage);
   }
   gohc(i){
     this.navCtrl.push(HotCoursePage,{
