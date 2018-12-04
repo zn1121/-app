@@ -17,7 +17,9 @@ export class MyclassPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  goback1(){
+    this.navCtrl.pop();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyclassPage');
   }

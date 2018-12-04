@@ -1,27 +1,4 @@
 page-mysetting {
-    ion-header{
-        .mprohead{
-            display: flex;
-            width: 100%;
-            height: 50px;
-            background-color: #00adb5;
-            .mprohead1{
-                width: 20%;
-                font-size: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .mprohead2{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 18px;
-                color: #fff;
-                width: 60%;
-            }
-        }
-    }
     ion-content{
         background-color: rgb(250,250,250)!important;
         .set{

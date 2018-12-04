@@ -8,7 +8,7 @@ import { BeginclassPage} from '../beginclass/beginclass';
 import { MyclassPage} from '../myclass/myclass';
 import { TeacherPage} from '../teacher/teacher';
 import { MyjobPage} from '../myjob/myjob';
-//import { LearningPage} from '../learning/learning';
+import { LearningPage} from '../learning/learning';
 import { HotCoursePage } from '../hotcourse/hot-course';
 import 'rxjs/add/operator/toPromise';
 
@@ -24,23 +24,23 @@ export class HomePage {
 
   }
 
-  goback(){
+  go(){
     this.navCtrl.push(LocationPage);
   }
-  goback1(){
+  go1(){
     this.navCtrl.push(BeginclassPage);
   }
-  goback2(){
+  go2(){
     this.navCtrl.push(MyclassPage);
   }
-  goback3(){
+  go3(){
     this.navCtrl.push(TeacherPage);
   }
-  goback4(){
+  go4(){
     this.navCtrl.push(MyjobPage);
   }
-  goback5(){
-    this.navCtrl.push(HotCoursePage);
+  go5(){
+    this.navCtrl.push(LearningPage);
   }
   gohc(i){
     this.navCtrl.push(HotCoursePage,{

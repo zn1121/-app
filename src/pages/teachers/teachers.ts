@@ -19,6 +19,9 @@ export class TeachersPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  goback4(){
+    this.navCtrl.pop();
+  }
   gotalk(){
     this.navCtrl.push(TalkPage);
   }

@@ -18,7 +18,10 @@ export class LearningPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  go(){
+  goback3(){
+    this.navCtrl.pop();
+  }
+  go8(){
     this.navCtrl.push(PublishPage);
   }
   ionViewDidLoad() {

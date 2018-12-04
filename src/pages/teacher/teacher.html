@@ -1,48 +1,64 @@
 
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>推荐老师</ion-title>
-  </ion-navbar>
-
+<ion-header> 
+    <div class="teach">
+        <ion-icon name="ios-arrow-back-outline" class="teach1" (click)="goback()"></ion-icon>
+        <p class="teach2">教师推荐</p>
+      </div>
 </ion-header>
 
-
 <ion-content>
-    <div class="item">
-        <ion-item>
-        <ion-avatar item-start> 
-          <img src="assets/imgs/img1.png">
-        </ion-avatar>
-          <h2>教师姓名：李其林</h2>
-          <p>教授课程：高一数学</p>
-        </ion-item>
-      </div>
-      <div class="icon">
-          <ion-icon name="arrow-forward" style="font-size: 20px;text-align: right;" (click)="go2()"></ion-icon>
-      </div>
+  <ion-card> 
+        <div class="item">
+            <div>
+              <ion-item >
+                <ion-avatar item-start>
+                  <img src="assets/imgs/img1.png">
+                </ion-avatar>
+                <h2>教师姓名：李其林</h2>
+                <p>教授课程：高一数学</p>
+              </ion-item>
+            </div>
+          <div>
+              <ion-item style="padding-top:8px; ">
+                  <i class="iconfont icon-xiangyou fr" (click)="go2()"></i>
+              </ion-item> 
+          </div>
+        </div>
+  </ion-card>
+  <ion-card> 
       <div class="item">
-          <ion-item>
-          <ion-avatar item-start> 
-            <img src="assets/imgs/img1.png">
-          </ion-avatar>
+        <div>
+          <ion-item >
+            <ion-avatar item-start>
+              <img src="assets/imgs/img1.png">
+            </ion-avatar>
+                <h2>教师姓名：李其林</h2>
+                <p>教授课程：高一数学</p>
+          </ion-item>
+        </div>
+        <div>
+            <ion-item style="padding-top:8px; ">
+              <i class="iconfont icon-xiangyou fr" (click)="go2()"></i>
+            </ion-item> 
+        </div>
+      </div>
+  </ion-card>
+  <ion-card> 
+      <div class="item">
+        <div>
+          <ion-item >
+            <ion-avatar item-start>
+              <img src="assets/imgs/img1.png">
+            </ion-avatar>
             <h2>教师姓名：李其林</h2>
             <p>教授课程：高一数学</p>
           </ion-item>
         </div>
-        <div class="icon">
-            <ion-icon name="arrow-forward" style="font-size: 20px;text-align: right;"></ion-icon>
+        <div>
+        <ion-item style="padding-top:8px; ">
+        <i class="iconfont icon-xiangyou fr" (click)="go2()"></i>
+        </ion-item> 
         </div>
-        <div class="item">
-            <ion-item>
-            <ion-avatar item-start> 
-              <img src="assets/imgs/img1.png">
-            </ion-avatar>
-              <h2>教师姓名：李其林</h2>
-              <p>教授课程：高一数学</p>
-            </ion-item>
-          </div>
-          <div class="icon">
-              <ion-icon name="arrow-forward" style="font-size: 20px;text-align: right;"></ion-icon>
-          </div>
+        </div>
+  </ion-card>
 </ion-content>

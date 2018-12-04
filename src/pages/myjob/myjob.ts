@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { JobPage} from '../job/job';
 import { JobsPage } from '../jobs/jobs';
+import { JobPage } from '../job/job';
 
 /**
  * Generated class for the MyjobPage page.
@@ -19,11 +19,14 @@ export class MyjobPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  go1(){
-    this.navCtrl.push(JobPage);
+  goback2(){
+    this.navCtrl.popToRoot();
   }
-  gofabu(){
+  go6(){
     this.navCtrl.push(JobsPage);
+  }
+  go7(){
+    this.navCtrl.push(JobPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyjobPage');

@@ -17,7 +17,9 @@ export class JobPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  goback6(){
+    this.navCtrl.pop();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad JobPage');
   }

@@ -17,7 +17,9 @@ export class PublishPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  goback8(){
+    this.navCtrl.pop();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PublishPage');
   }

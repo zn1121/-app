@@ -22,10 +22,6 @@ export class MysettingPage {
   gologinPage(){
     this.navCtrl.push(LoginPage);
   }
-  goback(){
-    this.navCtrl.pop();
-  }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad MysettingPage');
   }
