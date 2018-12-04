@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ForgetPage } from '../forget/forget';
-
+import { Http } from "@angular/http";
+import'rxjs/add/operator/map';
 /**
  * Generated class for the LoginPage page.
  *
@@ -24,7 +25,7 @@ export class LoginPage {
     this.isActive = i;
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public http:Http, public navCtrl: NavController, public navParams: NavParams) {
     for (let i = 0; i < 30; i++) {
       this.items.push( this.items.length );
     }
@@ -44,7 +45,11 @@ export class LoginPage {
     console.log("密码："+this.password);
   }
   
-    
+  doInfinite(infiniteScroll){
+    this.http.get('/api/course',{
+
+    })
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
