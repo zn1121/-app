@@ -42,9 +42,10 @@ export class HomePage {
   go5(){
     this.navCtrl.push(LearningPage);
   }
-  gohc(i){
-    this.navCtrl.push(HotCoursePage,{
-      id:this.i
+  isClick(i){
+    this.id=i;
+    this.navCtrl.push(HotCoursePage,{  //通过将数据传递给push方法的第二个参数，来将数据传递给下一个页面。
+      ids:this.id
     });
   }
   ionViewWillEnter(){
