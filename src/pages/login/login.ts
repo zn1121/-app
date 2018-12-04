@@ -19,8 +19,13 @@ export class LoginPage {
   items = [];
   view = ViewChild;
   isActive = true;
-  phonenumber: string;
-  password: string;
+  logintel: Number;
+  loginpassword: Number;
+  zhucetel: Number;
+  yanzhengma: Number;
+  zhucepassword: Number;
+  errorMessage: string;
+  
   isClick(i){
     this.isActive = i;
   }
@@ -35,23 +40,17 @@ export class LoginPage {
   }
   gobpage(){
     this.navCtrl.popToRoot();
-    console.log("用户名："+this.phonenumber);
-    console.log("密码："+this.password);
-
   }
   gologin(){
     this.navCtrl.push(LoginPage);
-    console.log("用户名："+this.phonenumber);
-    console.log("密码："+this.password);
+    console.log("用户名："+this.zhucetel);
+    console.log("验证码："+this.yanzhengma);
+    console.log("密码："+this.zhucepassword);
   }
   
-  doInfinite(infiniteScroll){
-    this.http.get('/api/course',{
-
-    })
-  }
+ 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    //console.log('ionViewDidLoad LoginPage');
   }
 
 }
