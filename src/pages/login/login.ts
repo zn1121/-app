@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ForgetPage } from '../forget/forget';
 import { Http } from "@angular/http";
 import'rxjs/add/operator/map';
+import { HttpParams } from '@angular/common/http';
+import {HttpClient} from "@angular/common/http";
 /**
  * Generated class for the LoginPage page.
  *
@@ -19,7 +21,7 @@ export class LoginPage {
   items = [];
   view = ViewChild;
   isActive = true;
-  logintel: Number;
+  logintel:Number;
   loginpassword: Number;
   zhucetel: Number;
   yanzhengma: Number;
@@ -30,7 +32,7 @@ export class LoginPage {
     this.isActive = i;
   }
 
-  constructor(public http:Http, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private httpt:HttpClient,public http:Http, public navCtrl: NavController, public navParams: NavParams) {
     for (let i = 0; i < 30; i++) {
       this.items.push( this.items.length );
     }
@@ -40,6 +42,19 @@ export class LoginPage {
   }
   gobpage(){
     this.navCtrl.popToRoot();
+
+    this.http.post('http://localhost:3000/customers',{
+      "name":this.logintel,
+      "password":this.loginpassword
+    }).subscribe(res => {
+      console.log(res);
+      //this.logintel = res.toString();
+    },error =>{
+      console.log("Error",error)
+    })
+    const params = new HttpParams().set('_page', "1").set('_limit', "1");
+    this.http.get("http://localhost:3000/customers",{params});
+    
   }
   gologin(){
     this.navCtrl.push(LoginPage);
