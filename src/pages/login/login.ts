@@ -6,6 +6,7 @@ import'rxjs/add/operator/map';
 import { HttpParams } from '@angular/common/http';
 import {HttpClient} from "@angular/common/http";
 import { AlertController } from 'ionic-angular';
+import { NgModel } from '@angular/forms';
 /**
  * Generated class for the LoginPage page.
  *
@@ -43,12 +44,21 @@ export class LoginPage {
   goforget(){
     this.navCtrl.push(ForgetPage);
   }
-  gobpage(){                    //登录页面
+  doalert() {
+      let alert = this.alertCtrl.create({
+        title: '提示！',
+        subTitle: '注册成功！',
+        buttons: ['Ok'],
+      });
+      alert.present();
+    }
+  gobpage(){              //登录页面
     this.http.post('http://localhost:3000/customers',{
       "name":this.logintel,
       "password":this.loginpassword
     }).subscribe(res => {
       console.log(res);
+      this.doalert();
       this.navCtrl.popToRoot();
     },error =>{
       console.log("Error",error)
@@ -75,7 +85,6 @@ export class LoginPage {
       this.http.post('http://www.zhuoran.fun:3000/register_stu',params).subscribe(res => {
         console.log(res);
         this.navCtrl.push(LoginPage);
-        alert("注册成功");
       },error =>{
         console.log("Error:",error)
       })
