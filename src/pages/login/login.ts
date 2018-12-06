@@ -6,7 +6,7 @@ import'rxjs/add/operator/map';
 import { HttpParams } from '@angular/common/http';
 import {HttpClient} from "@angular/common/http";
 import { AlertController } from 'ionic-angular';
-import { NgModel } from '@angular/forms';
+//import { NgModel } from '@angular/forms';
 /**
  * Generated class for the LoginPage page.
  *
@@ -72,25 +72,32 @@ export class LoginPage {
     });
     
   }
+//--------包装成为json数据--------
+  private encodeHttpParams(params: any): any {
+    if (!params) return null;
+    return new HttpParams({fromObject: params});
+  }
+//------------------
+
   gologin(){          //注册页面
-    
     console.log("用户名："+this.zhucetel);
     console.log("验证码："+this.yanzhengma);
     console.log("密码："+this.zhucepassword);
-    var params = JSON.stringify({
-      "stu_phone":this.zhucetel,
-      "stu_password":this.zhucepassword
-      })
+    
+    var params = {
+      stu_phone:this.zhucetel,
+      stu_password:this.zhucepassword
+      }
     if(this.yzma == this.yanzhengma ){
-      this.http.post('http://www.zhuoran.fun:3000/register_stu',params).subscribe(res => {
+      this.http.post('http://www.zhuoran.fun:3000/register_stu',this.encodeHttpParams(params)).subscribe(res => {
         console.log(res);
         this.navCtrl.push(LoginPage);
       },error =>{
         console.log("Error:",error)
       })
-    }
-    else{
-      alert("请输入正确验证码");
+     }
+     else{
+       alert("请输入正确验证码");
     }
   } 
   yanzheng(){           //验证码
@@ -102,7 +109,7 @@ export class LoginPage {
       },error=>{
         console.log("ERROR:",error)
       })
-    }else{
+    }else {
       alert("请输入手机号");
     }
     
