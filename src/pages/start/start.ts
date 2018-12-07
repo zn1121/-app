@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { TabsPage } from '../tabs/tabs';
 
 /**
- * Generated class for the MysettingPage page.
+ * Generated class for the StartPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,19 +11,15 @@ import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-mysetting',
-  templateUrl: 'mysetting.html',
+  selector: 'page-start',
+  templateUrl: 'start.html',
 })
-export class MysettingPage {
+export class StartPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  clear(){}//清除缓存信息
-  gologinPage(){
-    this.navCtrl.push(LoginPage);
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MysettingPage');
-  }
+a(){
+  this.navCtrl.setRoot(TabsPage);
+}
 
 }

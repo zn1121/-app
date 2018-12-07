@@ -7,12 +7,16 @@
 <!--发送消息和表情能实现-->
 <ion-header>
 
-  <ion-navbar color="orange">
+  <ion-navbar color="setnav" >
     <ion-title >{{touser.username}}</ion-title>
   </ion-navbar>
 
 </ion-header>
-
+<div >
+  <ion-icon name="ios-arrow-back-outline" class="myclass1" (click)="goback1()"></ion-icon>
+  <p class="myclass2">我的课件</p>
+  <button ion-button round small class="nav1">上传</button>
+</div>
 
 <ion-content>
     <div *ngFor="let message of messages" class="messages">
@@ -44,5 +48,5 @@
   
         <ion-input id="input" [(ngModel)]="txt" placeholder="请输入内容" [ngModelOptions]="{standalone: true}"></ion-input>
         <span><ion-icon name="md-happy" id="face"></ion-icon></span>  <!--表情-->
-        <button ion-button  (click)="send(txt)" style="height:30px;">发送</button>  <!--点击发送按钮可以发送数据-->
+        <button ion-button  (click)="send(txt)" style="height:30px;" color="setnav">发送</button>  <!--点击发送按钮可以发送数据-->
 </ion-footer>

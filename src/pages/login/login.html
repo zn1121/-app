@@ -22,7 +22,7 @@
                   <ion-input type="number" placeholder="请输入验证码" [(ngModel)]="yanzhengma" ></ion-input> 
                 </ion-item>
                 <p class="lgbut">
-                <button class="button button-light" (click)="yanzheng()">获 取<span>(10)</span></button>
+                  <button  ion-button round [disabled]="!verifyCode.disable" (click)="yanzheng()">{{verifyCode.verifyCodeTips}}</button>
                 </p>
             </div>
             <div class="login2-2">
@@ -63,6 +63,4 @@
       </div>
     </div>
   </div>
-  <button  ion-button round [disabled]="!verifyCode.disable" (click)="getCode()">{{verifyCode.verifyCodeTips}}</button>
-  
 </ion-content>

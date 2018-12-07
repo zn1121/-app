@@ -8,9 +8,9 @@
 
 
 <ion-content>   
-   <ul class="navList">
-       <li><button  (click)="isClick(0)"  ion-button color='orange'><span [class.first]="isActive==0" >学生专区</span></button></li>  
-       <li><button  (click)="isClick(1)" ion-button color='orange'><span [class.first]="isActive==1" >教师专区</span></button></li>
+  <ul class="navList">
+    <li [class.first]="isActive==0" (click)="isClick(0)" ><span>学生专区</span></li>  
+    <li [class.first]="isActive==1" (click)="isClick(1)" ><span>教师专区</span></li>
    </ul>
    <div [ngSwitch]="isActive">   <!--控制下方内容切换-->
      <div *ngSwitchCase="0" class="content1"> <!--学生专区-->
@@ -18,7 +18,7 @@
           <li class="lis" *ngFor="let item1 of arr1;let idx=index;">
           <p class="p1">课程名称:{{item1?.name}}</p>
           <div class="video">
-            <video class="video-play" width="100%" height="150" controls="controls" autoplay="true">
+            <video class="video-play" width="100%" height="150" controls="controls" >
                <source src="http://usercontent.edu2act.cn/media/cs/17-02-20/qywkioNyXCXzDa5bkUmXkW.mp4" type="video/mp4">
           </video>
           </div>
@@ -31,7 +31,7 @@
             <li class="lis" *ngFor="let item2 of arr2;let idx=index;">
             <p class="p1">课程名称:{{item2?.name}}</p>
             <div class="video">
-               <video class="video-play" width="100%" height="150" controls="controls" autoplay="true">
+               <video class="video-play" width="100%" height="150" controls="controls" >
                   <source src="http://usercontent.edu2act.cn/media/cs/17-02-20/qywkioNyXCXzDa5bkUmXkW.mp4" type="video/mp4">
              </video>
             </div>

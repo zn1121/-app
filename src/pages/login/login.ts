@@ -112,22 +112,13 @@ doalertlogin() {
       stu_phone:this.logintel,
       stu_password:this.loginpassword
     }
-    this.http.post('http://localhost:3000/customers',this.encodeHttpParams(params)).subscribe(res => {
+    this.http.post('http://localhost:3000/customers/login',this.encodeHttpParams(params)).subscribe(res => {
       console.log(res);
       this.loginalert();
       this.navCtrl.popToRoot();
     },error =>{
       console.log("Error",error)
-    })
-
-    // const params = new HttpParams().set('_page', "2").set('_limit', "1");
-    // this.http.get("http://localhost:3000/customers",{params})
-    // .subscribe(res=>{
-    //   console.log(res);
-    // },error =>{
-    //   console.log("Error",error)
-    // });
-    
+    })    
   }
   //--------包装成为json数据--------
   private encodeHttpParams(params: any): any {

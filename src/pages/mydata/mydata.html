@@ -1,11 +1,11 @@
 <ion-header>
-    <div class="mdfshead">
-        <ion-icon name="ios-arrow-back-outline" class="mdfshead1" (click)="goback()"></ion-icon>
-        <p class="mdfshead2">个人信息</p>
-      </div>
+  <ion-navbar color="setnav" >
+    <ion-title >成为老师</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <p class="tixing">若想成为老师请如实填写以下信息！</p>
   <div class="mdfscon">
     <ion-list >
       <ion-item >
@@ -19,10 +19,6 @@
       <ion-item >
         <ion-label>教师性别:</ion-label>
         <ion-input type="text" placeholder="请填写"></ion-input>
-      </ion-item>
-      <ion-item >
-        <ion-label>教师教龄:</ion-label>
-        <ion-input type="number" placeholder="请填写"></ion-input>
       </ion-item>
       <ion-item >
         <ion-label>邮  箱:</ion-label>
@@ -55,28 +51,37 @@
       <ion-item style="width:100%">
           <ion-label class="check1">年级:</ion-label>
           <ion-label class="checkbox">
-            大一 &nbsp;<input type="checkbox" >
+            大一 &nbsp;<input type="radio" name="group">
           </ion-label>
           <ion-label class="checkbox">
-            大二 &nbsp;<input type="checkbox">
+            大二 &nbsp;<input type="radio" name="group">
           </ion-label>
           <ion-label class="checkbox">
-            大三 &nbsp;<input type="checkbox">\n
+            大三 &nbsp;<input type="radio" name="group">
           </ion-label>
           <ion-label class="checkbox">
-            大四 &nbsp;<input type="checkbox">
+            大四 &nbsp;<input type="radio" name="group">
           </ion-label>
+      </ion-item>
+      <p>-----------------实名认证-----------------</p>
+      <ion-item >
+        <ion-label>姓名:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>身份证号:</ion-label>
+        <ion-input type="number" placeholder="请填写"></ion-input>
       </ion-item>
       <ion-item >
         <ion-label>备  注:</ion-label>
         <ion-label class="textarea1">
-          <textarea placeholder="Comments"></textarea>
+          <textarea placeholder="说点什么吧。。。"></textarea>
         </ion-label>
-        
       </ion-item>
     </ion-list>
+    
   </div>
   <div class="mdfscon1">
-    <button class="button button-light" (click)="goback()">确认修改</button>
+    <button class="button button-light" (click)="goback()">成为老师</button>
   </div>
 </ion-content>

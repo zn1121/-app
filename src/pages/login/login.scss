@@ -75,19 +75,18 @@ page-login {
                 display: flex;
                 margin: 0 auto;
                 flex-direction: row;
-                width: 85%;
+                width: 80%;
                 .login2-1{
                     width: 60%;
                 }
                 .lgbut{
                     float: left;
-                    width: 20%;
+                    width: 25%;
                     button{
                         opacity: 0.7;
                         width: 100%;
                         height: 40px;
                         font-size: 10px;
-                        background-color: #fff;
                         border:1px solid #878c8e;
                         border-radius: 5px;
                         span{

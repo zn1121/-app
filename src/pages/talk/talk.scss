@@ -6,6 +6,7 @@ page-talk {
     ion-title{
         text-align:center; 
         padding-right:48px;  /*返回按钮为48px*/
+       
     }
     .messages{
         width:100%;
@@ -60,7 +61,7 @@ page-talk {
       .bubble.right:before {
         background-color: #158ffe;
         right: 10px;
-        transform: rotate(120deg);
+        transform: rotate(115deg);
       }
     
       .c{

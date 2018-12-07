@@ -3,6 +3,10 @@ page-hot-course {
         padding:0px!important;
         margin:0px;
     }
+    ion-title{
+        text-align:center; 
+        padding-right:48px; 
+    }
     ion-content{
         width:100%;
     .navList{
@@ -12,7 +16,7 @@ page-hot-course {
         margin:0;
         height:100%;
         .first{ 
-            background:orange;
+            background:#00adb5;
             button{
             color:white!important;}  //必须first属性里面加上button，否则color不会改变
             }

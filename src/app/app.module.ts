@@ -1,17 +1,15 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, Platform } from 'ionic-angular'; 
 import { MyApp } from './app.component';
 
 import { HttpModule } from '@angular/http';
 import { MessagePage } from '../pages/message/message';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 //import { Camera } from '@ionic-native/camera';
-import { SettingPage } from '../pages/setting/setting';
 import { LoginPage } from '../pages/login/login';
 import { ForgetPage } from '../pages/forget/forget';
 import { MyPage } from '../pages/my/my';
@@ -38,8 +36,9 @@ import { TeacherPage } from '../pages/teacher/teacher';
 import { TeachersPage } from '../pages/teachers/teachers';
 import { HotCoursePage } from '../pages/hotcourse/hot-course';
 import { JobsPage } from '../pages/jobs/jobs';
-
-
+import { IonicStorageModule } from '@ionic/storage'
+import { StartPage } from '../pages/start/start';
+import { StatusBar } from '@ionic-native/status-bar';  //状态栏设置
 
 
 
@@ -51,7 +50,6 @@ import { JobsPage } from '../pages/jobs/jobs';
     MessagePage,
     HomePage,
     TabsPage,
-    SettingPage,
     LoginPage,
     ForgetPage,
     MyPage,
@@ -77,7 +75,8 @@ import { JobsPage } from '../pages/jobs/jobs';
     TeacherPage,
     TeachersPage,
     HotCoursePage,
-    JobsPage
+    JobsPage,
+    StartPage
   ],
   imports: [
     BrowserModule,
@@ -85,8 +84,10 @@ import { JobsPage } from '../pages/jobs/jobs';
     HttpModule,
     IonicModule.forRoot(MyApp, {//隐藏二级页
       backButtonText: '',
+      backButtonIcon:'ios-arrow-back-outline',
       tabsHideOnSubPages:true
-    })
+    }),
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -94,7 +95,6 @@ import { JobsPage } from '../pages/jobs/jobs';
     MessagePage,
     HomePage,
     TabsPage,
-    SettingPage,
     LoginPage,
     ForgetPage,
     MyPage,
@@ -120,7 +120,8 @@ import { JobsPage } from '../pages/jobs/jobs';
     TeacherPage,
     TeachersPage,
     HotCoursePage,
-    JobsPage
+    JobsPage,
+    StartPage
   ],
   providers: [
     StatusBar,
@@ -129,4 +130,6 @@ import { JobsPage } from '../pages/jobs/jobs';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+
+}

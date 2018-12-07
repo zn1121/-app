@@ -41,8 +41,9 @@ page-affirm {
                 margin-top:5%;
                 height:30px;
                 border-radius:10%;
-                color:white;
+                color:black;
                 font-size:13px;
+                background-color: #fafafa;
             }
             
         }
@@ -63,8 +64,9 @@ page-affirm {
                 padding:0;
                 margin:0 10%!important; //margin-left right相对于父元素的宽度
                 width:80%!important;
-                color:black!important;
+                color:white!important;
                 border-radius:5%;
+                background-color: #00adb5;
             }
         }
     }

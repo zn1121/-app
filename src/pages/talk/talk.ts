@@ -18,7 +18,7 @@ export class TalkPage {
   touser = {   //被发送人
     id: '123456',
     pic: '../assets/imgs/mine2.png',
-    username: '哈哈',
+    username: '张三',
   };
 
   user = {   //发送人

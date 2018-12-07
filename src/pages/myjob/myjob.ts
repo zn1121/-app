@@ -25,6 +25,9 @@ export class MyjobPage {
   go6(){
     this.navCtrl.push(JobsPage);
   }
+  go2(){
+    this.navCtrl.push(JobPage);
+  }
   go7(){
     this.navCtrl.push(JobPage);
   }

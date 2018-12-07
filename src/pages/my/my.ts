@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { MydataPage } from '../mydata/mydata';
 import { MycoursePage } from '../mycourse/mycourse';
-import { MyprovePage } from '../myprove/myprove';
+//import { MyprovePage } from '../myprove/myprove';
 import { MytalkPage } from '../mytalk/mytalk';
 import { MysettingPage } from '../mysetting/mysetting';
 import 'rxjs/add/operator/toPromise';
@@ -38,7 +38,7 @@ export class MyPage {
     this.navCtrl.push(MycoursePage);
   }
   goprove(){
-    this.navCtrl.push(MyprovePage);
+    this.navCtrl.push(MydataPage)
   }
   gotalk(){
     this.navCtrl.push(MytalkPage);

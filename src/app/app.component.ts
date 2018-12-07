@@ -4,6 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Tabs } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { StartPage } from '../pages/start/start';
 @Component({
   templateUrl: 'app.html'
 })
@@ -30,10 +32,22 @@ export class MyApp {
     }
   }
   constructor(public appCtrl: App,
-    public toastCtrl: ToastController,private platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen) {
+    public toastCtrl: ToastController,private platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen,public storage: Storage) {
+      this.storage.get('firstIn').then((result) => { 
+        result=false
+        if(result){  
+          this.rootPage = TabsPage; 
+        } 
+        else{
+          this.storage.set('firstIn', true);
+          this.rootPage = StartPage;
+        }
+  
+      });
     platform.ready().then(() => {
+      splashScreen.hide(); //解决白屏
       statusBar.styleDefault();
-      this.statusBar.backgroundColorByHexString('#f00');
+      this.statusBar.backgroundColorByHexString('#077076');  //状态栏的设置
       splashScreen.hide();
       
       this.platform.registerBackButtonAction(() => {
@@ -48,5 +62,6 @@ export class MyApp {
       });
   
     });
-  }
+    }
+  
 }
