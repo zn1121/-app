@@ -88,6 +88,8 @@ page-login {
                         height: 40px;
                         font-size: 10px;
                         border:1px solid #878c8e;
+                        background-color:#afeeee;
+                        color:gray;
                         border-radius: 5px;
                         span{
                         font-size: 8px;
@@ -96,24 +98,21 @@ page-login {
                 }
             }   
         }
-        .login3{
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            position: relative;
-            width: 80%;
-            background-color: #ffdb2c;
-            height: 50%;
-            margin-top: 10%;
-            p{
-                color: white;
-                font-size: 16px;
-            }
+        .button{
+            width:100%;
+            button{
+                 margin:0 10%!important;
+                margin-top:10%!important;
+                 width: 80%;
+                 background-color: #ffdb2c;
+                padding:0!important;
+                color:gray!important;
+           }
         }
         .login6{
             display: flex;
             justify-content: center;
-            margin-top: 5%;
+            margin-top: 1%;
             text-align: center;
             font-size: 60%;
             p{
